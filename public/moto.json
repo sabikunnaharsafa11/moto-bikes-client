@@ -1,0 +1,82 @@
+[
+    {   
+       
+        "title": "Yamaha",
+        "price": 45000,
+        "description": "Yamaha is motorcycle sales are the second largest in the world Outboard motor and Yamaha is the world leader in water vehicle sales.",
+        
+        "img": "https://s1.cdn.autoevolution.com/images/moto_models/YAMAHA_YZF-R7-2021_main.jpg"
+    },
+    {  
+        
+        "title": "Ducati",
+        "price": 55000,
+        "description": "Ducati is the motorcycle-manufacturing division of Italian company Ducati, headquartered in Bologna, Italy",
+        
+        "img": "https://images.carandbike.com/bike-images/medium/ducati/panigale-v2/ducati-panigale-v2.jpg?v=4" 
+    },
+    {  
+       
+        "title": "Kawasaki",
+        "price": 65000,
+        "description": "Kawasaki is a Japanese company famous for making motorcycles, among other things. Its slogan is Let the good times roll!.",
+        
+        "img": "https://cdn.visordown.com/styles/amp_1200/s3/Screenshot%202019-06-21%20at%2014.50.25.png" 
+    },
+    {   
+     
+        "title": "BMW",
+        "price": 75000,
+        "description": "BMW Motorrad is the motorcycle brand of the German company BMW, part of its Corporate and Brand Development division.",
+        
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNIdhUONOLOdg-P2y1nvdnXypRqsuaTBPkNYsvc2IwbYwT-rRX1lIpVt_9lmnOVlS9WME&usqp=CAU" 
+    },
+    {   
+       
+        "title": "Suzuki",
+        "price": 85000,
+        "description": "Suzuki is a Japanese company that manufactures motorcycles. They make all sorts of motorcycles ranging from street use motorcycles to dirt bikes",
+        
+        "img": "https://cloudfront-us-east-1.images.arcpublishing.com/octane/5Z2QQDDOGQO5TFS54EPW7SO7QU.jpg" 
+    },
+    {  
+       
+        "title": "Aprilia",
+        "price": 95000,
+        "description": "Aprilia is an Italian motorcycle company, one of the brands owned by Piaggio. Having started as a manufacturer of bicycles it moved on to manufacture ",
+        
+        "img": "https://cloudfront-us-east-1.images.arcpublishing.com/octane/BDEMGS4UIVADDOLR4HXNRHEYUM.jpg" 
+    },
+    {   
+       
+        "title": "Norton",
+        "price": 10000,
+        "description": "Cagiva was an Italian motorcycle manufacturer. It was founded in 1950 by Giovanni Castiglioni in Varese, originally producing ",
+        
+        "img": "https://autoportal.com/img/models/d8/5/norton-motorcycles-dominator-1510824456.jpeg" 
+    },
+    {   
+        
+        "title": "Hero",
+        "price": 11000,
+        "description": "Hero is an Indian motorcycle and scooter manufacturer based in New Delhi, India. The company is the largest two-wheeler ",
+        
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpuPB7gKG1FTKdcVMe4o3DTJwYolkMN7HRdK9AZpS_puD7HY2Z0mkOCKk88B9ZfbFMEGg&usqp=CAU"   
+    },
+    {   
+        "title": "Bimota",
+        "price":12000,
+        "description": "Bimota is a small Italian manufacturer of custom and production motorcycles. It was founded in 1973 in Rimini",
+        
+        "img": "https://motorcycles.news/wp-content/uploads/2019/11/Bimota-TesiH2-Motorcycle-News-App-Motorrad-Nachrichten-App-MotorcyclesNews-10-1030x580.jpg" 
+    },
+    {   
+        
+        "title": "KTM ",
+        "price": 13000,
+        "description": "KTM is an Austrian motorcycle and sports car manufacturer owned by KTM Industries AG and Indian manufacturer Bajaj Auto",
+        
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlCN98N_PBbyP0Gc_tTSqvmg492VTnW4m9dAOuwPw6Y0sm1Q9vFk1kingLkUUmhM61HE&usqp=CAU"   
+    }
+    
+]
