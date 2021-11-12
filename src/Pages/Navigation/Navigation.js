@@ -34,8 +34,10 @@ const Navigation = () => {
             <NavLink style={{textDecoration: 'none', color: 'white', marginRight: '80px'}} to="/explore">
              Explore
             </NavLink>
+
+            
             {
-                user?.email?
+               user.email?
                <Box>
                  <NavLink style={{textDecoration: 'none', color: 'white'}} to="/dashboard">
                <Button color="inherit">Dashboard</Button>

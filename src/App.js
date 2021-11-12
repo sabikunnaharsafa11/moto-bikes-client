@@ -16,6 +16,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Purchase from './Pages/Home/Purchase/Purchase';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Error from './Pages/Error/Error';
+import Footer from './Pages/Footer/Footer';
 
 
 
@@ -33,10 +34,10 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <PrivateRoute exact path="/explore">
+          <Route exact path="/explore">
             <Explore />
-          </PrivateRoute>
-          <PrivateRoute exact path="/dashboard">
+          </Route>
+          <PrivateRoute path="/dashboard">
             <Dashboard/>
           </PrivateRoute>
           <PrivateRoute exact path="/purchase/:productsId">
@@ -50,8 +51,9 @@ function App() {
           </Route>
           <Route path="/*">
             <Error />
-          </Route>
+          </Route>          
         </Switch>
+        <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>

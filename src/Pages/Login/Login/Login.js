@@ -7,9 +7,10 @@ import useAuth from './../../../hooks/useAuth';
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const { user, loginUser, isLoading, authError } = useAuth();
-
+  
     const location = useLocation();
     const history = useHistory();
+    
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -19,7 +20,7 @@ const Login = () => {
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginData.password, location, history);
+        loginUser(loginData.email, loginData.password, location, history );
         e.preventDefault();
     }
 
@@ -34,7 +35,7 @@ const Login = () => {
                     id="standard-basic"
                     label="Your Email"
                     name="email"
-                    onChange={handleOnChange}
+                    onBlur={handleOnChange}
                     variant="standard" />
                 <TextField
                     sx={{ width: '75%', m: 1 }}
@@ -42,7 +43,7 @@ const Login = () => {
                     label="Your Password"
                     type="password"
                     name="password"
-                    onChange={handleOnChange}
+                    onBlur={handleOnChange}
                     variant="standard" />
 
                 <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>

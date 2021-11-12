@@ -15,12 +15,34 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Button } from '@mui/material';
+
+import {
+    Switch,
+    Route,
+    Link,
+    useRouteMatch
+} from "react-router-dom";
+import DashboardHome from '../DashboardHome/DashboardHome';
+import Pay from '../Pay/Pay';
+import Orders from '../Orders/Orders';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+
+
+import AddProduct from '../AddProduct/AddProduct';
+
+
+
+
+
 
 const drawerWidth = 200;
 
 function Dashboard(props) {
   const { window } = props;
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  let { path, url } = useRouteMatch();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -30,27 +52,18 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <Link to="/explore"><Button color="inherit">Explore</Button></Link>
+      <br />
+     <Link to={`${url}/orders`}><Button color="inherit">My Orders</Button></Link>
+     <br />
+     <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link>
+     <br />
+     <Link to={`${url}/addProduct`}><Button color="inherit">Add Product</Button></Link>
+     <br />
+     <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+      
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+     
     </div>
   );
 
@@ -118,9 +131,27 @@ function Dashboard(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography paragraph>
-         content here
-        </Typography>
+        
+
+        <Switch>
+                <Route exact path={path}>
+                <DashboardHome></DashboardHome>
+                 </Route>  
+
+                <Route path={`${path}/pay`}>
+                 <Pay></Pay>
+                </Route>
+                <Route path={`${path}/orders`}>
+                <Orders></Orders>
+                </Route>
+                <Route path={`${path}/makeAdmin`}>
+                <MakeAdmin></MakeAdmin>
+                </Route>
+                <Route path={`${path}/addProduct`}>
+                <AddProduct></AddProduct>
+                </Route>
+
+                </Switch>
         
       </Box>
     </Box>
