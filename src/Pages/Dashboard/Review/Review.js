@@ -5,7 +5,7 @@ const Review = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => { 
         console.log(data);    
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://serene-beyond-53028.herokuapp.com/reviews', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data),
