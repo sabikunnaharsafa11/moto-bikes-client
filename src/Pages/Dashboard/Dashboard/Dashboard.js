@@ -30,9 +30,9 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 
 
 import AddProduct from '../AddProduct/AddProduct';
-
-
-
+import useAuth from '../../../hooks/useAuth';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 
 
 
@@ -40,9 +40,9 @@ const drawerWidth = 200;
 
 function Dashboard(props) {
   const { window } = props;
-
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
+  const{admin} = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -58,10 +58,14 @@ function Dashboard(props) {
      <br />
      <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link>
      <br />
-     <Link to={`${url}/addProduct`}><Button color="inherit">Add Product</Button></Link>
-     <br />
-     <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-      
+     {admin && <Box>
+         <Link to={`${url}/addProduct`}><Button color="inherit">Add Product</Button></Link>
+       <br />
+        <Link to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
+        <br />
+        <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+         </Box>}
+         
       <Divider />
      
     </div>
@@ -144,12 +148,15 @@ function Dashboard(props) {
                 <Route path={`${path}/orders`}>
                 <Orders></Orders>
                 </Route>
-                <Route path={`${path}/makeAdmin`}>
+                <AdminRoute path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>
-                </Route>
-                <Route path={`${path}/addProduct`}>
+                </AdminRoute>
+                <AdminRoute path={`${path}/addProduct`}>
                 <AddProduct></AddProduct>
-                </Route>
+                </AdminRoute>
+                <AdminRoute path={`${path}/manageAllOrders`}>
+                <ManageAllOrders></ManageAllOrders>
+                </AdminRoute>
 
                 </Switch>
         

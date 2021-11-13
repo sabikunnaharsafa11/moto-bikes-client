@@ -22,11 +22,11 @@ const Product = ({product}) => {
         alt="green iguana"
       />
         <CardContent>
-          <Typography variant="h5" component="div">
+          <Typography sx={{ fontWeight: 600}} variant="h5" component="div">
           { title}
           </Typography>
-          <Typography variant="h6" component="div">
-          { price}
+          <Typography sx={{ fontWeight: 600, color:'red'}} variant="h6" component="div">
+          ${ price}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {description}

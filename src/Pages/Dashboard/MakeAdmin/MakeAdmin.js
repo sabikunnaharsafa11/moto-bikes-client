@@ -1,9 +1,11 @@
 import { Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import useAuth from '../../../hooks/useAuth';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('')
-
+    
+    
     const handleOnBlur = e => {
         setEmail(e.target.value);
     }
@@ -13,6 +15,7 @@ const MakeAdmin = () => {
         fetch('https://serene-beyond-53028.herokuapp.com/users/admin', {
             method: "PUT",
             headers: {
+               
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(user)

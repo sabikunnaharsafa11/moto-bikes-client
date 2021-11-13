@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeFirebase from "../Pages/Login/Firebase/firebase.init";
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword , onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword , onAuthStateChanged, updateProfile, getIdToken, signOut } from "firebase/auth";
 
 
 initializeFirebase();
@@ -58,14 +58,21 @@ const useFirebase = () =>{
     const unsubscribed = onAuthStateChanged(auth, (user) => {
         if (user) {
             setUser(user);
-           
+          
         } else {
             setUser({})
         }
         setIsLoading(false);
     });
     return () => unsubscribed;
-}, [])
+}, [auth])
+
+ useEffect(() => {
+   fetch(`http://localhost:5000/users/${user.email}`)
+   .then(res=> res.json())
+   .then(data => setAdmin(data.admin))
+
+ },[user.email])
 
   const logOut = () =>{
     setIsLoading(true);
@@ -94,6 +101,8 @@ const useFirebase = () =>{
 
   return {
       user,
+      admin,
+    
       isLoading,
       authError,
       registerUser,

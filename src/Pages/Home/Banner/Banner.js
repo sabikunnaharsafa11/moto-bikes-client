@@ -1,42 +1,85 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import bannerimg from '../../../images/images (1).jpg'
-// import bg from '../../../images/baae29f89c1dfb4fd09fa48ba5b23f1ba.jpg'
-import { Button, Typography, Container } from '@mui/material';
 
-// const bannerBg = {
-//     background:`url(${bg})`,
-//     height: 500
-// }
-
-const verticalCenter ={
-    display:'flex',
-    alignItems: 'center',
-    height: 450
-}
 
 const Banner = () => {
     return (
-        <Container sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item style={{ ...verticalCenter, textAlign: 'left'}} xs={12} md={5}>
-            <Box>
-            <Typography variant="h3">
-              Your New 
-            </Typography>
-            <Typography variant="h6" sx={{fontSize:14, fontWeight:300, color:'gray'}}>
-             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad voluptates reiciendis nemo ipsa, minus molestias totam labore eum blanditiis ullam?
-            </Typography>
-            <Button variant="contained" >Buy Now</Button>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={7} style={verticalCenter}>
-          <img style={{width: '450px'}} src={bannerimg} alt="" />
-          </Grid>
-         
-        </Grid>
-      </Container>
+      <div>
+      <div
+        id="carouselExampleIndicators"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-indicators ">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            className="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/198/327/823/ducati-superbike-panigale-r-side-view-motorcycle-vehicle-wallpaper-preview.jpg"
+              className=" w-100 h-100"
+              alt="..."
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src="https://pictures.topspeed.com/IMG/crop/201312/ducati-superbike-119-20_800x0w.jpg"
+              className="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src="https://photos.motogp.com/2021/02/12/2019-motogp-red-bull-ring-spielbergmiguel-oliveira_88_rc16_red-bull-ktm-factory-racing_motogp_team-presentation_2021-24-.gallery_full_top_lg.jpg"
+              className="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
     );
 };
 

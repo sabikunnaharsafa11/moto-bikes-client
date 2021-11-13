@@ -25,14 +25,14 @@ const Navigation = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-             Moto Bikes
+             MOTO BIKES
             </Typography>
             <NavLink style={{textDecoration: 'none', color: 'white', marginRight: '20px' }} to="/home">
-            Home
+            HOME
             </NavLink>
             <br />
-            <NavLink style={{textDecoration: 'none', color: 'white', marginRight: '80px'}} to="/explore">
-             Explore
+            <NavLink style={{textDecoration: 'none', color: 'white', marginRight: '20px'}} to="/explore">
+             EXPLORE
             </NavLink>
 
             
