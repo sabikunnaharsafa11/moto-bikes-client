@@ -29,6 +29,7 @@ import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import Review from '../Review/Review';
+import ManageProduct from '../ManageProduct/ManageProduct';
 
 
 
@@ -54,7 +55,7 @@ function Dashboard(props) {
      <br />
      <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link>
      <br />
-     <Link to={`${url}/review`}><Button color="inherit">Review</Button></Link>
+     <Link to={`${url}/review`}><Button color="inherit">Add Review</Button></Link>
      <br />
      {admin && <Box>
          <Link to={`${url}/addProduct`}><Button color="inherit">Add Product</Button></Link>
@@ -62,7 +63,12 @@ function Dashboard(props) {
         <Link to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Orders</Button></Link>
         <br />
         <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
+        <br />
+        <Link to={`${url}/manageProduct`}><Button color="inherit">Manage Product</Button></Link>
          </Box>}
+        
+
+       
          
       <Divider />
      
@@ -157,6 +163,9 @@ function Dashboard(props) {
                 </AdminRoute>
                 <AdminRoute path={`${path}/manageAllOrders`}>
                 <ManageAllOrders></ManageAllOrders>
+                </AdminRoute>
+                <AdminRoute path={`${path}/manageProduct`}>
+                <ManageProduct></ManageProduct>
                 </AdminRoute>
 
                 </Switch>
