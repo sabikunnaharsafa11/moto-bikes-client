@@ -24,9 +24,7 @@ const Footer = () => {
                     }}
                   />
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                    Moto Bikes
                   </p>
                 </div>
   
@@ -41,23 +39,23 @@ const Footer = () => {
                     }}
                   />
                   <p>
-                    <a href="#!" className="text-white">
-                      MDBootstrap
+                    <a href="/home" className="text-white">
+                      Home
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-white">
-                      MDWordPress
+                    <a href="/explore" className="text-white">
+                     Explore
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-white">
-                      BrandFlow
+                    <a href="/dashboard" className="text-white">
+                      Dashboard
                     </a>
                   </p>
                   <p>
-                    <a href="#!" className="text-white">
-                      Bootstrap Angular
+                    <a href="/login" className="text-white">
+                      Login
                     </a>
                   </p>
                 </div>

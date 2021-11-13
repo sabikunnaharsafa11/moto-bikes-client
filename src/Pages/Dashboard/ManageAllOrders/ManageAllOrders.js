@@ -31,7 +31,7 @@ const ManageAllOrders = () => {
     };
     return (
         <div>
-        <h3 className="text-center text-uppercase my-4">
+        <h3 className="text-center fw-bold  text-uppercase my-4">
           your {orders?.length} orders
         </h3>
         <div className="container">

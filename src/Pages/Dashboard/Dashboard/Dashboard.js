@@ -6,12 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -33,6 +28,7 @@ import AddProduct from '../AddProduct/AddProduct';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
+import Review from '../Review/Review';
 
 
 
@@ -57,6 +53,8 @@ function Dashboard(props) {
      <Link to={`${url}/orders`}><Button color="inherit">My Orders</Button></Link>
      <br />
      <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link>
+     <br />
+     <Link to={`${url}/review`}><Button color="inherit">Review</Button></Link>
      <br />
      {admin && <Box>
          <Link to={`${url}/addProduct`}><Button color="inherit">Add Product</Button></Link>
@@ -147,6 +145,9 @@ function Dashboard(props) {
                 </Route>
                 <Route path={`${path}/orders`}>
                 <Orders></Orders>
+                </Route>
+                <Route path={`${path}/review`}>
+                <Review></Review>
                 </Route>
                 <AdminRoute path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>

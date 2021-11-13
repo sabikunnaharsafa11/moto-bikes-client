@@ -1,9 +1,12 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
 const DashboardHome = () => {
     return (
         <div>
-            <h2>this is bashboard</h2>
+            <Typography sx={{ fontWeight: 600, m: 2, textAlign:'center'}} variant="h4" component="div">
+            Welcome to Dashboard
+           </Typography>
         </div>
     );
 };
