@@ -28,33 +28,13 @@ const HomeReview = () => {
                       size={24}
                       half={true}
                       color1={'#ffd700'} />
-                   
                     <p class="card-text">{review.description}</p>
                   </div>
                 </div>
-              </>
-            ))}     {reviews.map((review) => (
-              <>
-                <div class="card mx-3">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">{review.name}</h5>                           
-                      <ReactStars
-                      className = 'd-flex align-items-center justify-content-center'
-                      count={review.rating}
-                      // onChange={ratingChanged}
-                      size={24}
-                      half={true}
-                      color1={'#ffd700'} />
-                   
-                    <p class="card-text">{review.description}</p>
-                  </div>
-                </div>
-              </>
+              </>            
             ))}
             </div>
-          </div>
-       
-      
+          </div>     
     );
 };
 
